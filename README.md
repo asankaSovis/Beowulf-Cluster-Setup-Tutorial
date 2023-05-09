@@ -1,4 +1,4 @@
-# Beowulf Cluster Setup
+# 🖥️ Beowulf Cluster Setup
 
 ![Poster](https://github.com/asankaSovis/Beowulf-Cluster-Setup-Tutorial/assets/46389631/ebe5f49e-2737-4f59-a8ab-54edad9cc72b)
 
