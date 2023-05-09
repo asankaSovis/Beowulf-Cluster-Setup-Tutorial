@@ -1,5 +1,7 @@
 # Beowulf Cluster Setup
 
+![Poster](https://github.com/asankaSovis/Beowulf-Cluster-Setup-Tutorial/assets/46389631/ebe5f49e-2737-4f59-a8ab-54edad9cc72b)
+
 ## 1. Introduction
 
 A Beowulf cluster is a type of High-Performance Computing (HPC) cluster that is designed to perform parallel computations on large data sets or complex computational problems. It is named after the legendary warrior Beowulf, who is known for his strength and ability to overcome seemingly insurmountable challenges.
