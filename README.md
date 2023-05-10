@@ -349,14 +349,34 @@ from mpi4py import MPI
 
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
+name = MPI.Get_processor_name()
 
-print('My rank is ',rank)
+print('My rank is ', rank, ' and hostname is ', name)
 ```
 
 Once done, save the file and use the following command to run the program.
 
 ```
-mpirun -np 12 --hostfile hosts hello.py
+mpirun -np 12 --hostfile hosts python3 hello.py
+```
+
+If you get an error that says that `mpi4py` library is not installed, install it. (under *mpiuser*, use command `pip install mpi4py`) If you get an error that says something simillar to **Permission Denied**, use the command `chmod +rwx ~` under *mpiuser* to mark the home folder and its content as executable. Retry running the command again.
+
+You should get an output simillar to below.
+
+```
+My rank is 1 and hostname is master
+My rank is 3 and hostname is master
+My rank is 2 and hostname is master
+My rank is 4 and hostname is master
+My rank is 5 and hostname is node1
+My rank is 6 and hostname is node1
+My rank is 8 and hostname is node1
+My rank is 9 and hostname is node2
+My rank is 7 and hostname is node1
+My rank is 10 and hostname is node2
+My rank is 11 and hostname is node2
+My rank is 12 and hostname is node2
 ```
 
 ## 7. Conclusion
@@ -379,3 +399,7 @@ Together, a Beowulf cluster and MPI provide a powerful platform for running larg
 - https://github.com/jbornschein/mpi4py-examples
 - https://gist.github.com/arifsisman/bcb6409fcb6150099cb8ddd044e28060
 - https://rabernat.github.io/research_computing/parallel-programming-with-mpi-for-python.html
+- https://blogs.cisco.com/performance/tree-based-launch-in-open-mpi
+- https://blogs.cisco.com/performance/tree-based-launch-in-open-mpi-part-2
+
+© 2023 Asanka Sovis & Chathuni Patikirige
